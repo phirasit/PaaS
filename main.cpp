@@ -1,20 +1,21 @@
 #include <iostream>
+#include <fstream>
+#include <string>
+#include <locale>
 
 using namespace std;
 
 int main(int argc, char *argv[]) {
 
-    if (argc == 2) {
-        string str (argv[1]);
-        string rev_str (str.rbegin(), str.rend());
+    wstring str;
+	getline(wcin, str);
 
-        if (str == rev_str) {
-            cout << "YES" << endl;
-        } else {
-            cout << "NO" << endl;
-        }
+    wstring rev_str (str.rbegin(), str.rend());
+
+    if (str == rev_str) {
+        cout << "YES" << endl;
     } else {
-        cout << "Number of arguments is not 1" << endl;
+        cout << "NO" << endl;
     }
 
 	return 0;
