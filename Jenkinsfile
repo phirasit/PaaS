@@ -9,14 +9,12 @@ node {
         sh './buildscript.sh'
     }
 
-    stage('Build image') {
-        app = docker.build('phirasit/paas')
+    stage('Test program') {
+        sh 'echo "Tests passed"';
     }
 
-    stage('Test image') {
-        app.inside {
-            sh 'echo "Tests passed"'
-        }
+    stage('Build image') {
+        app = docker.build('phirasit/paas')
     }
 
     stage('Push image') {
