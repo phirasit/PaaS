@@ -10,7 +10,7 @@ node {
     }
 
     stage('Test program') {
-        sh 'echo "Tests passed"';
+        sh './test.sh'
     }
 
     stage('Build image') {
