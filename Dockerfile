@@ -1,3 +1,5 @@
 FROM scratch
 ADD palindrome /
-CMD ["/palindrome"]
+CMD ["./palindrome"]
+
+EXPOSE 8000

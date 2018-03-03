@@ -6,7 +6,7 @@ node {
     }
 
     stage('Build program') {
-        sh 'g++ main.cpp -o palindrome -static'
+        sh './buildscript.sh'
     }
 
     stage('Build image') {
